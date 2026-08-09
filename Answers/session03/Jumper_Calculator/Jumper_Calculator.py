@@ -1,14 +1,19 @@
-"""برنامه‌ای بنویسید که 10 بار ارتفاع پرش ورزشکار را دریافت کند.
+newrec=0
+oldrec=0
+howhigh=0
+for _ in range(10):
+    jumper=float(input(('M /CM Jump:')))
+    newrec=jumper
+    if newrec > oldrec:
+        howhigh= newrec - oldrec
+        print(f'job well done you jump {howhigh} M higher this time')
+    elif newrec == oldrec:
+        print(f'old record was {oldrec} and new record is {newrec} same record try harder ')
+    elif newrec < oldrec:
+        howhigh = newrec - oldrec
+        print(f'you jump {howhigh} M less this time')
 
-اگر رکورد جدید بود، پیام «بیشترین پرش ثبت شد» نمایش داده شود.
-اگر قبلاً ثبت شده بود، پیام مناسب چاپ شود."""
-l1=[]
-gym_guy=l1.append(float(input('enter Km / Jump: ')))
+    oldrec=newrec
 
-gym_guy=l1[0]
 
-for newrec in gym_guy:
-    if gym_guy > newrec:
-        gym_guy=newrec
 
-print(f'new rec is added / you jump {gym_guy} higher now')
